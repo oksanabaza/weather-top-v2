@@ -17,4 +17,10 @@ export const dashboardController = {
     await playlistStore.addPlaylist(newPlaylist);
     response.redirect("/dashboard");
   },
+  async deletePlaylist(request, response) {
+    const playlistId = request.params.id;
+    console.log(`Deleting Playlist ${playlistId}`);
+    await playlistStore.deletePlaylistById(playlistId);
+    response.redirect("/dashboard");
+  },
 };

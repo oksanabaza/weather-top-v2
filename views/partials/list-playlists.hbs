@@ -1,9 +1,13 @@
 {{#each playlists}}
-  <div class="box box-link-hover-shadow">
-    <h2 class="title">
-      <a href="/playlist/{{_id}}">
-        {{title}}
-      </a>
-    </h2>
-  </div>
+<div class="box box-link-hover-shadow">
+  <h2 class="title">
+    {{title}}
+  </h2>
+  <a href="/playlist/{{_id}}" class="button">
+    {{>icons/open}}
+  </a>
+  <a href="/dashboard/deleteplaylist/{{_id}}" class="button">
+    {{>icons/delete}}
+  </a>
+</div>
 {{/each}}
