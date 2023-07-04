@@ -3,8 +3,7 @@ import { dashboardController } from "./controllers/dashboard-controller.js";
 import { aboutController } from "./controllers/about-controller.js";
 import { playlistController } from "./controllers/playlist-controller.js";
 import { accountsController } from "./controllers/accounts-controller.js";
-
-// const accounts = require("./controllers/accounts-controller.js");
+import { trackController } from "./controllers/track-controller.js";
 
 export const router = express.Router();
 
@@ -24,3 +23,5 @@ router.get("/playlist/:id", playlistController.index);
 router.post("/playlist/:id/addtrack", playlistController.addTrack);
 router.get("/dashboard/deleteplaylist/:id", dashboardController.deletePlaylist);
 router.get("/playlist/:playlistid/deletetrack/:trackid", playlistController.deleteTrack);
+router.get("/playlist/:playlistid/edittrack/:trackid", trackController.index);
+router.post("/playlist/:playlistid/updatetrack/:trackid", trackController.update);
