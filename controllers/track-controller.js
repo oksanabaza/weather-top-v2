@@ -23,7 +23,10 @@ export const trackController = {
       duration: Number(request.body.duration),
     };
     console.log(`Updating Track ${trackId} from Playlist ${playlistId}`);
+<<<<<<< HEAD
     // const track = await trackStore.getTrackById(trackId);
+=======
+>>>>>>> main
     await trackStore.updateTrack(trackId, updatedTrack);
     response.redirect("/playlist/" + playlistId);
   },
