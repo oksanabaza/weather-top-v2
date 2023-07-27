@@ -40,17 +40,6 @@ export const trackStore = {
     await db.write();
   },
 
-  async updateTrack(track, updatedTrack) {
-    track.title = updatedTrack.title;
-    track.artist = updatedTrack.artist;
-    track.duration = updatedTrack.duration;
-    await db.write();
-  },
-  async getTrackById(id) {
-    await db.read();
-    return db.data.tracks.find((track) => track._id === id);
-  },
-
   async updateTrack(trackId, updatedTrack) {
     const track = await this.getTrackById(trackId);
     track.title = updatedTrack.title;

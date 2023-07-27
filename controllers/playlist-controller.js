@@ -1,15 +1,19 @@
 import { playlistStore } from "../models/playlist-store.js";
 import { trackStore } from "../models/track-store.js";
+import { playlistAnalytics } from "../utils/playlist-analytics.js";
 
 export const playlistController = {
   async index(request, response) {
     const playlist = await playlistStore.getPlaylistById(request.params.id);
+    const shortestTrack = playlistAnalytics.getShortestTrack(playlist);
     const viewData = {
       title: "Playlist",
       playlist: playlist,
+      shortestTrack: shortestTrack,
     };
     response.render("playlist-view", viewData);
   },
+
   async addTrack(request, response) {
     const playlist = await playlistStore.getPlaylistById(request.params.id);
     const newTrack = {
