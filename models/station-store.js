@@ -20,7 +20,7 @@ export const stationStore = {
 
   async getStationById(id) {
     await db.read();
-    const list = db.data.stations.find((playlist) => station._id === id);
+    const list = db.data.stations.find((station) => station._id === id);
     return list;
   },
 

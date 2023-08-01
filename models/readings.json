@@ -1,0 +1,19 @@
+{
+  "file": "./models/readings.json",
+  "readings": [
+    {
+      "title": "tjn",
+      "artist": "tjn",
+      "duration": 6,
+      "_id": "5d64d6cf-d6d1-498d-8fe0-ff7d67b3a9a6",
+      "stationid": "99834be4-a01d-49d4-8b9d-f61730c80b2d"
+    },
+    {
+      "title": "6",
+      "artist": "6",
+      "duration": 6,
+      "_id": "64b61c00-6cbb-4cd2-92ee-54190d20e831",
+      "stationid": "99834be4-a01d-49d4-8b9d-f61730c80b2d"
+    }
+  ]
+}
