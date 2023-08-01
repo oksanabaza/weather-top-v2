@@ -1,0 +1,17 @@
+{
+  "file": "./models/stations.json",
+  "stations": [
+    {
+      "title": "k",
+      "_id": "2c8cfba9-0b8e-4a9a-a24c-fbcd997d6ed1"
+    },
+    {
+      "title": "klnl;n",
+      "_id": "6975e019-25b9-473f-a737-9fc6054b888d"
+    },
+    {
+      "title": "yjtyj",
+      "_id": "41289e33-f38f-4099-82ba-3c0519468370"
+    }
+  ]
+}
